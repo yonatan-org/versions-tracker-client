@@ -4,7 +4,6 @@ import VersionInstance from './versionInstance';
 const versionsPage = (props) => {
 
     const generateVersions = (versionData) => {
-        console.log(JSON.stringify(versionData));
         return versionData.map((version) => {
             return <VersionInstance version={version}/>
         })

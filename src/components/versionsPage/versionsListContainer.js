@@ -10,28 +10,28 @@ const versions_data =  [{
         },
         committers: [
             {
-                commiter: {
+                committer: {
                     username: "yonatan.k",
                     imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
                 },
                 commitMessage: "This is my Brilliant commit message"
             },
             {
-                commiter: {
+                committer: {
                     username: "yonatan.k",
                     imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
                 },
                 commitMessage: "This is my Brilliant commit message"
             },
             {
-                commiter: {
+                committer: {
                     username: "yonatan.k",
                     imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
                 },
                 commitMessage: "This is my Brilliant commit message"
             },
             {
-                commiter: {
+                committer: {
                     username: "yonatan.k",
                     imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
                 },
