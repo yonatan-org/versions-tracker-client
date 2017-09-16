@@ -1,0 +1,22 @@
+.committers {
+    width: 500px;
+    margin:0 auto;
+}
+
+.committer {
+    margin: 10px 0;
+    display: inline-table;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.commit-message {
+    vertical-align: middle;
+}
+
+.committer-image {
+    border-radius: 50px;
+    height: 50px;
+}
