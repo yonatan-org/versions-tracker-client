@@ -38,7 +38,305 @@ const versions_data =  [{
                 commitMessage: "This is my Brilliant commit message"
             }]
 
-    }]
+    },
+    {
+        applicationData: {
+            application: "WalkMe Editor",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+    {
+        applicationData: {
+            application: "WalkMe Store",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+    {
+        applicationData: {
+            application: "WalkMe PCA",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+    {
+        applicationData: {
+            application: "WalkMe EA",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.1.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+    {
+        applicationData: {
+            application: "Walkme Lib",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+    {
+        applicationData: {
+            application: "Visions",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+    {
+        applicationData: {
+            application: "Visions",
+            environment: "Production",
+            lastDeploymentData: new Date(),
+            versionNumber: "v.234"
+        },
+        committers: [
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/58.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/men/34.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            },
+            {
+                committer: {
+                    username: "yonatan.k",
+                    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg"
+                },
+                commitMessage: "This is my Brilliant commit message"
+            }]
+
+    },
+
+
+
+]
 
 class versionsListConainer extends React.Component {
 

@@ -1,3 +1,28 @@
+.version-info-wrapper{
+    border-bottom: 2px solid black;
+}
+
+.version-info{
+    display: inline-table;
+    width:100%;
+    background: darkseagreen;
+    border-radius: 50px 50px 0 0;
+}
+
+.version-info-application{
+    vertical-align: middle;
+    font-size: 40px;
+}
+
+
+.version-instance{
+    border:1px solid black;
+    width:550px;
+    border-radius: 50px;
+    margin:20px;
+    float:left;
+}
+
 .committers {
     width: 500px;
     margin:0 auto;
@@ -13,7 +38,12 @@
 }
 
 .commit-message {
-    vertical-align: middle;
+    text-overflow: ellipsis;
+    width: 370px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px;
+    display: block;
 }
 
 .committer-image {
