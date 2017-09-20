@@ -6,7 +6,8 @@ const versions_data =  [{
             application: "Visions",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "completed"
         },
         committers: [
             {
@@ -44,7 +45,8 @@ const versions_data =  [{
             application: "WalkMe Editor",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "deploying"
         },
         committers: [
             {
@@ -110,7 +112,8 @@ const versions_data =  [{
             application: "WalkMe Store",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "reverted"
         },
         committers: [
             {
@@ -148,7 +151,8 @@ const versions_data =  [{
             application: "WalkMe PCA",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "reverted"
         },
         committers: [
             {
@@ -186,7 +190,8 @@ const versions_data =  [{
             application: "WalkMe EA",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.1.234"
+            versionNumber: "v.1.234",
+            status : "reverted"
         },
         committers: [
             {
@@ -224,7 +229,8 @@ const versions_data =  [{
             application: "Walkme Lib",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "reverted"
         },
         committers: [
             {
@@ -262,7 +268,8 @@ const versions_data =  [{
             application: "Visions",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "reverted"
         },
         committers: [
             {
@@ -300,7 +307,8 @@ const versions_data =  [{
             application: "Visions",
             environment: "Production",
             lastDeploymentData: new Date(),
-            versionNumber: "v.234"
+            versionNumber: "v.234",
+            status : "reverted"
         },
         committers: [
             {

@@ -5,8 +5,19 @@
 .version-info{
     display: inline-table;
     width:100%;
-    background: darkseagreen;
     border-radius: 50px 50px 0 0;
+}
+
+.version-info.completed {
+    background: darkseagreen;
+}
+
+.version-info.deploying {
+    background: orange;
+}
+
+.version-info.reverted {
+    background: red;
 }
 
 .version-info-application{

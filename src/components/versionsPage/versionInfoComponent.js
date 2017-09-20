@@ -1,9 +1,17 @@
 import React from 'react';
+import classNames from 'classnames'
 
 const VersionInfoComponent = (props) => {
+    
+    const obj = {'version-info' :true}
+    obj[props.versionInfo.status] = true;
+    const versionInfoCss = classNames(obj)
+
     return (
+        
+
         <div className="version-info-wrapper">
-            <div className="version-info">
+            <div className={versionInfoCss}>
                 <div className="version-info-application table-cell">
                     <div className="version-info-application">{props.versionInfo.application}</div>    
                 </div>
