@@ -4,8 +4,9 @@ import Committer from "./committerComponent";
 const CommittersComponent = (props) => {
 
     const createCommitters = (committers) => {
+        let counter=0;
         return committers.map((committer) => {
-            return <Committer committer={committer}/>
+            return <Committer committer={committer} key={counter++}/>
         })
     }
 

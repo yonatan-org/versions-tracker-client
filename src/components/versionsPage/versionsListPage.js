@@ -5,7 +5,7 @@ const versionsPage = (props) => {
 
     const generateVersions = (versionData) => {
 
-        if (versionData.length == 0)
+        if (versionData.length === 0)
             return null;
 
         let counter = 0;
@@ -20,6 +20,6 @@ const versionsPage = (props) => {
         </div>
 
     )
-}
+};
 
 export default versionsPage;
