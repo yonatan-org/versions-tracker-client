@@ -1,11 +1,21 @@
 import React from 'react';
 import VersionsListPage from './versionsListPage'
 import $ from 'jquery';
+import openSocket from 'socket.io-client';
+const socket = openSocket('http://localhost:8000');
+
+const subscribeToVersionChangedEvent = (cb) => {
+    socket.on('versionChange', version => cb(null, version));
+  }
 
 class versionsListConainer extends React.Component {
 
     constructor(props) {
         super(props);
+
+        subscribeToVersionChangedEvent((err, version) =>  {
+        });
+
         this.state = {
             versions : []
         }
@@ -18,7 +28,7 @@ class versionsListConainer extends React.Component {
     }
 
     render() {
-        // return <h1>Hello, {this.props.name}</h1>;
+        // return <h1>Hello, {this.state.timestamp}</h1>;
         return <VersionsListPage versions={this.state.versions}/>
     }
 }
