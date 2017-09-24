@@ -3,9 +3,11 @@ import VersionsListPage from './versionsListPage'
 import $ from 'jquery';
 import openSocket from 'socket.io-client';
 const socket = openSocket('http://localhost:8000');
+const speech = require('./speech');
 
 const subscribeToVersionChangedEvent = (cb) => {
     socket.on('versionChange', version => cb(null, version));
+    
   }
 
 class versionsListConainer extends React.Component {
@@ -14,6 +16,7 @@ class versionsListConainer extends React.Component {
         super(props);
 
         subscribeToVersionChangedEvent((err, version) =>  {
+            speech("Starting Deployment of , , Insights?!");
         });
 
         this.state = {
