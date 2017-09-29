@@ -1,22 +1,31 @@
 import React from 'react';
-import VersionInstance from './versionInstance';
+import VersionBucketComponent from './versionBucketComponent';
+import speechEventHandler from '../speech/speechEventHandler';
 
 const versionsPage = (props) => {
 
-    const generateVersions = (versionData) => {
+    const generateVersionBuckets = (versionData) => {
 
         if (versionData.length === 0)
             return null;
 
         let counter = 0;
-        return versionData.map((version) => {
-            return <VersionInstance version={version} key={counter++}/>
+        const projects = [];
+
+        for (var projectName in versionData) {
+            if (versionData.hasOwnProperty(projectName)) {
+                projects.push(projectName)
+            }
+        }
+        
+        return projects.map((project) => {
+            return <VersionBucketComponent version={versionData[project]} key={counter++}/>
         })
     }
 
     return (
         <div className="versions">
-            {generateVersions(props.versions)}
+            {generateVersionBuckets(props.versions)}
         </div>
 
     )

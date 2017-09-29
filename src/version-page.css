@@ -1,37 +1,43 @@
+.version-bucket {
+    width:550px;
+    float:left;
+    border: 2px solid black;
+    margin:30px;
+}
+
 .version-info-wrapper{
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
 }
 
 .version-info{
     display: inline-table;
     width:100%;
-    border-radius: 50px 50px 0 0;
+    height: 70px;
 }
 
-.version-info.completed {
+.version-info.complete {
     background: darkseagreen;
 }
 
-.version-info.deploying {
+.version-info.init {
     background: orange;
 }
 
-.version-info.reverted {
+.version-info.aborted {
     background: red;
 }
 
+.middle-align {
+}
+
 .version-info-application{
-    vertical-align: middle;
     font-size: 40px;
 }
 
 
 .version-instance{
     border:1px solid black;
-    width:550px;
-    border-radius: 50px;
     margin:20px;
-    float:left;
 }
 
 .committers {
@@ -46,6 +52,7 @@
 
 .table-cell {
     display: table-cell;
+    vertical-align: middle;
 }
 
 .commit-message {

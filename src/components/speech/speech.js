@@ -1,4 +1,3 @@
-// Create a new utterance for the specified text and add it to the queue.
 
 const getVoices = () => {
     return new Promise((resolve, reject) => {
@@ -12,7 +11,7 @@ const getVoices = () => {
     })
 }
 
-function speak(text) {
+export function speak(text) {
 
     getVoices().then((voices) => {
         // Create a new instance of SpeechSynthesisUtterance.
@@ -22,8 +21,8 @@ function speak(text) {
         msg.text = text;
 
         // Set the attributes.
-        msg.volume = parseFloat(10);
-        msg.rate = parseFloat(1);
+        msg.volume = parseFloat(20);
+        msg.rate = parseFloat(0.9);
         msg.pitch = parseFloat(1);
 
         msg.voice = voices.filter(function (voice) {
@@ -37,5 +36,3 @@ function speak(text) {
     })
 
 }
-
-module.exports = speak;
