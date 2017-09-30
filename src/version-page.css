@@ -1,18 +1,20 @@
 .version-bucket {
     width:550px;
     float:left;
-    border: 2px solid black;
-    margin:30px;
+    border: 1px solid black;
+    margin:8px;
 }
 
 .version-info-wrapper{
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-radius: 50px 50px 0 0;
 }
 
 .version-info{
     display: inline-table;
     width:100%;
-    height: 70px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
 }
 
 .version-info.complete {
@@ -36,13 +38,19 @@
 
 
 .version-instance{
-    border:1px solid black;
-    margin:20px;
+    margin:15px;
+}
+
+.version-instance:nth-child(2) {
+    margin-top:48px;
 }
 
 .committers {
-    width: 500px;
-    margin:0 auto;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+    max-height: 499px;
+    overflow-y: auto;
 }
 
 .committer {

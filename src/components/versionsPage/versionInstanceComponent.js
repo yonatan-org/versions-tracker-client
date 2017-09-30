@@ -1,5 +1,5 @@
 import React from 'react';
-import Committers from "./committersComponent";
+import CommittersComponent from "./committersComponent";
 import VersionInfo from "./versionInfoComponent";
 
 const versionInstance = (props) => {
@@ -9,7 +9,7 @@ const versionInstance = (props) => {
     return (
         <div className="version-instance" key={counter++}>
             <VersionInfo versionInfo={props.version}/>
-            <Committers committers={props.version.commitsData}/>
+            <CommittersComponent committers={props.version.commitsData}/>
         </div>
     );
 
