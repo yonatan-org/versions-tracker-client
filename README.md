@@ -28,57 +28,55 @@ This application is based on the react-create-app framework, fire it up by:</p>
 
 <p>The application will make a call to <strong><em>[configurableHost]/api/versions</em></strong>  and would expect to receive the following object:</p>
 
-<pre><code>{
-"program1":[
-{
-"projectName":"Program1",
-"buildStatus":"init",
-"commitsData":[
-{
-"username":"deverloper1",
-"commit_message":"commit message",
-"imageUrl":"https://randomuser.me/api/portraits/women/97.jpg"
-},
-{
-"username":"developer2",
-"commit_message":"commit message 2",
-"imageUrl":"https://randomuser.me/api/portraits/women/7.jpg"
-}
-],
-"versionData":{
-"commitId":"sdfsdfsdfsdf-sdfsdfsdf",
-"version":"1.24",
-"buildTime":"2017-09-29 13:28:39",
-"environment":"Production"
-}
-},
-{
-"projectName":"Program1",
-"buildStatus":"complete",
-"commitsData":[
-{
-"username":"developer1",
-"commit_message":"commit message",
-"imageUrl":"https://randomuser.me/api/portraits/men/94.jpg"
-},
-{
-"username":"deverloper2",
-"commit_message":"commit message 2",
-"imageUrl":"https://randomuser.me/api/portraits/women/15.jpg"
-}
-],
-"versionData":{
-"commitId":"sdfsdfsdfsdf-sdfsdfsdf",
-"version":"1.24",
-"buildTime":"2017-09-29 13:28:39",
-"environment":"Production"
-}
-}
-]
+<pre><code>{  
+   "program1":[  
+      {  
+         "projectName":"Program1",
+         "buildStatus":"init",
+         "commitsData":[  
+            {  
+               "username":"deverloper1",
+               "commit_message":"commit message",
+               "imageUrl":"https://randomuser.me/api/portraits/women/97.jpg"
+            },
+            {  
+               "username":"developer2",
+               "commit_message":"commit message 2",
+               "imageUrl":"https://randomuser.me/api/portraits/women/7.jpg"
+            }
+         ],
+         "versionData":{  
+            "commitId":"sdfsdfsdfsdf-sdfsdfsdf",
+            "version":"1.24",
+            "buildTime":"2017-09-29 13:28:39",
+            "environment":"Production"
+         }
+      },
+      {  
+         "projectName":"Program1",
+         "buildStatus":"complete",
+         "commitsData":[  
+            {  
+               "username":"developer1",
+               "commit_message":"commit message",
+               "imageUrl":"https://randomuser.me/api/portraits/men/94.jpg"
+            },
+            {  
+               "username":"deverloper2",
+               "commit_message":"commit message 2",
+               "imageUrl":"https://randomuser.me/api/portraits/women/15.jpg"
+            }
+         ],
+         "versionData":{  
+            "commitId":"sdfsdfsdfsdf-sdfsdfsdf",
+            "version":"1.24",
+            "buildTime":"2017-09-29 13:28:39",
+            "environment":"Production"
+         }
+      }
+   ]
 }
 </code></pre>
-
-
 
 <h2 id="receiving-updates-from-server">Receiving Updates From Server:</h2>
 
