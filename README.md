@@ -30,12 +30,12 @@ This application is based on the react-create-app framework, fire it up by:</p>
 "buildStatus":"init",
 "commitsData":[
 {
-"username":"yonatan krieger",
+"username":"deverloper1",
 "commit_message":"commit message",
 "imageUrl":"https://randomuser.me/api/portraits/women/97.jpg"
 },
 {
-"username":"matan cohen",
+"username":"developer2",
 "commit_message":"commit message 2",
 "imageUrl":"https://randomuser.me/api/portraits/women/7.jpg"
 }
@@ -52,12 +52,12 @@ This application is based on the react-create-app framework, fire it up by:</p>
 "buildStatus":"complete",
 "commitsData":[
 {
-"username":"yonatan krieger",
+"username":"developer1",
 "commit_message":"commit message",
 "imageUrl":"https://randomuser.me/api/portraits/men/94.jpg"
 },
 {
-"username":"matan cohen",
+"username":"deverloper2",
 "commit_message":"commit message 2",
 "imageUrl":"https://randomuser.me/api/portraits/women/15.jpg"
 }
