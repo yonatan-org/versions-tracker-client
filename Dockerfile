@@ -4,6 +4,8 @@ RUN mkdir -p /home/app/code/
 
 WORKDIR /home/app/code/
 
+COPY . /home/app/code/
+
 RUN npm install
 
 CMD ["npm", "start"]
