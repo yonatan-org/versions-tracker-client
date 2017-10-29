@@ -1,11 +1,10 @@
-version: '3.1'
+version: '2.1'
 
 services:
   web:
    build:
      context: .
      dockerfile: Dockerfile
-   volumes:
-    - ./:/home/app/code:cached
+
    ports:
     - 3000:3000
