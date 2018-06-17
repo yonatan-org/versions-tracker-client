@@ -13,7 +13,7 @@ const versionBucketComponent = (props) => {
         return versions.map((version) => {
             return <VersionInstance version={version} key={counter++}/>
         })
-    }
+    };
 
     return (
         <div className="version-bucket">

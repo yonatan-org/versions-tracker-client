@@ -9,11 +9,11 @@ const versionInstance = (props) => {
     return (
         <div className="version-instance" key={counter++}>
             <VersionInfo versionInfo={props.version}/>
-            <CommittersComponent committers={props.version.commitsData}/>
+            <CommittersComponent committers={props.version.commits}/>
         </div>
     );
 
 
-}
+};
 
 export default versionInstance;
