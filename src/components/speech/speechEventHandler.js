@@ -3,7 +3,7 @@ import * as serverEventsHandler from '../events/serverEventsHandler';
 
 export function handleEvent(event) {
 
-    switch (event.buildStatus) {
+    switch (event.status) {
         case 'init' : handleStartDeployment(event);
             break;
         case 'complete' : handleDeploymentCompleted(event);
@@ -17,8 +17,8 @@ export function handleEvent(event) {
     function handleStartDeployment(event) {
         speech.speak(`starting deployment of ${event.projectName}`);
         speech.speak(`with commits by`);
-        event.commitsData.map((commitData) => {
-            setTimeout(speech.speak(commitData.username), 700);
+        event.commits.map((commitData) => {
+            setTimeout(speech.speak(commitData.name), 700);
         })
     }
         

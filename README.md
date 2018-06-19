@@ -33,7 +33,7 @@ This application is based on the react-create-app framework, fire it up by:</p>
       {  
          "projectName":"Program1",
          "buildStatus":"init",
-         "commitsData":[  
+         "commits":[
             {  
                "username":"deverloper1",
                "commit_message":"commit message",
@@ -55,7 +55,7 @@ This application is based on the react-create-app framework, fire it up by:</p>
       {  
          "projectName":"Program1",
          "buildStatus":"complete",
-         "commitsData":[  
+         "commits":[
             {  
                "username":"developer1",
                "commit_message":"commit message",

@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames'
+import Card from '@material-ui/core/Card';
 
 const VersionInfoComponent = (props) => {
 
@@ -8,7 +9,7 @@ const VersionInfoComponent = (props) => {
     const versionInfoCss = classNames(obj);
 
     return (
-        <div className="version-info-wrapper">
+        <Card>
             <div className={versionInfoCss}>
                 <div className="version-info-application table-cell">
                     <div className="version-info-application">{props.versionInfo.projectName}</div>
@@ -19,7 +20,7 @@ const VersionInfoComponent = (props) => {
                     <div>{props.versionInfo.version}</div>
                 </div>
             </div>
-        </div>
+        </Card>
     );
 };
 
