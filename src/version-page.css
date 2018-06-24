@@ -1,6 +1,6 @@
 .version-bucket {
-    max-width:32%;
-    float:left;
+    /*max-width:32%;*/
+    /*!*float:left;*!*/
     border: 1px solid black;
     margin:8px;
 }
@@ -29,6 +29,10 @@
     background: red;
 }
 
+.version-info.beta {
+    background: blue;
+}
+
 .middle-align {
 }
 
@@ -51,6 +55,11 @@
     border-bottom:1px solid black;
     max-height: 499px;
     overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.committer-info {
+    width:100px;
 }
 
 .committer {

@@ -1,34 +1,41 @@
 import React from 'react';
 import VersionBucketComponent from './versionBucketComponent';
 import speechEventHandler from '../speech/speechEventHandler';
+import StackGrid from "react-stack-grid";
 
-const versionsPage = (props) => {
+class versionsPage extends React.Component {
 
-    const generateVersionBuckets = (versionData) => {
+    componentDidUpdate = (props) => {
+        this.grid.updateLayout();
+    };
 
-        if (versionData.length === 0)
-            return null;
+    render() {
+        const generateVersionBuckets = (versionData) => {
 
-        let counter = 0;
-        const projects = [];
+            if (versionData.length === 0)
+                return null;
 
-        for (var projectName in versionData) {
-            if (versionData.hasOwnProperty(projectName)) {
-                projects.push(projectName)
+            let counter = 0;
+            const projects = [];
+
+            for (var projectName in versionData) {
+                if (versionData.hasOwnProperty(projectName)) {
+                    projects.push(projectName)
+                }
             }
-        }
-        
-        return projects.map((project) => {
-            return <VersionBucketComponent version={versionData[project]} key={counter++}/>
-        })
-    }
 
-    return (
-        <div className="versions">
-            {generateVersionBuckets(props.versions)}
-        </div>
+            return projects.map((project) => {
+                return <VersionBucketComponent version={versionData[project]} key={counter++}/>
+            })
+        };
 
-    )
-};
+        return (
+            <StackGrid columnWidth={450} gutterWidth={0} gridRef={grid => this.grid = grid}>
+                {generateVersionBuckets(this.props.versions)}
+            </StackGrid>
+
+        )
+    };
+}
 
 export default versionsPage;
