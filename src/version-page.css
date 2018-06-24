@@ -63,7 +63,7 @@
 }
 
 .committer {
-    margin: 10px 0;
+    margin: 18px 0 18px 10px;
     display: inline-table;
 }
 
@@ -79,6 +79,7 @@
     overflow: hidden;
     padding: 10px;
     display: block;
+    text-align : left;
 }
 
 .committer-image {
