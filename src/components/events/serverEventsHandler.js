@@ -6,11 +6,15 @@ const clientCallbacks = [];
 const subscribeToEvent = () => {
     socket.on('versionEvent', versionEvent => {
         notifyClients(versionEvent);
+    });
+
+    socket.on('betaStatusChange', versionEvent => {
+        alert('BETA!');
     })
-}
+};
 
 function notifyClients(versionEvent) {
-    for (var i = 0; i < clientCallbacks.length; i++) {
+    for (let i = 0; i < clientCallbacks.length; i++) {
         clientCallbacks[i](versionEvent);
     }
 }

@@ -15,7 +15,7 @@ const VersionInfoComponent = (props) => {
                     <div className="version-info-application">{props.versionInfo.projectName}</div>
                 </div>
                 <div className="version-info-time-and-version table-cell">
-                    <div className="version-info-environment">{props.versionInfo.environment}</div>
+                    {/*<div className="version-info-environment">{props.versionInfo.environment}</div>*/}
                     {/*<div>{new Date(props.versionInfo.buildTime).toLocaleTimeString('en-GB')}</div>*/}
                     <div>{props.versionInfo.version}</div>
                 </div>

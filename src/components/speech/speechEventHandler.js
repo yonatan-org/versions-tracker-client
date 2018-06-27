@@ -4,13 +4,20 @@ import * as serverEventsHandler from '../events/serverEventsHandler';
 export function handleEvent(event) {
 
     switch (event.status) {
-        case 'init' : handleStartDeployment(event);
+        case 'init' :
+            handleStartDeployment(event);
             break;
-        case 'complete' : handleDeploymentCompleted(event);
+        case 'complete' :
+            handleDeploymentCompleted(event);
             break;
-        case 'failure' : handleDeploymentFailed(event);
+        case 'failure' :
+            handleDeploymentFailed(event);
             break;
-        case 'aborted' : handleDeploymentAborted(event);
+        case 'aborted' :
+            handleDeploymentAborted(event);
+            break;
+        case 'beta' :
+            handleDeploymentBeta(event);
             break;
     }
 
@@ -21,12 +28,16 @@ export function handleEvent(event) {
             setTimeout(speech.speak(commitData.name), 700);
         })
     }
-        
-    function handleDeploymentCompleted (event) {
+
+    function handleDeploymentCompleted(event) {
         speech.speak(`deployment of ${event.projectName} is complete`);
     }
 
-    function handleDeploymentFailed( event) {
+    function handleDeploymentBeta(event) {
+        speech.speak(`deployment of ${event.projectName} is in BETA`);
+    }
+
+    function handleDeploymentFailed(event) {
         speech.speak(`deployment of ${event.projectName} has failed`);
     }
 
