@@ -2,21 +2,21 @@
     /*max-width:32%;*/
     /*!*float:left;*!*/
     border: 1px solid black;
-    margin:8px;
+    margin: 8px;
 }
 
-.version-info-wrapper{
+.version-info-wrapper {
     border: 1px solid black;
     border-radius: 50px 50px 0 0;
 }
 
-.version-info{
+.version-info {
     display: inline-table;
-    width:380px;
+    width: 380px;
     height: 120px;
     border-radius: 50px 50px 0 0;
-    padding:10px;
-    border:1px solid black;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 .version-info-title {
@@ -24,7 +24,7 @@
 }
 
 .version-info.complete {
-    background: darkseagreen;
+    background: #00e600;
 }
 
 .version-info.init {
@@ -42,30 +42,29 @@
 .middle-align {
 }
 
-.version-info-application{
+.version-info-application {
     font-size: 40px;
 }
 
-
-.version-instance{
-    margin:15px;
+.version-instance {
+    margin: 15px;
 }
 
 .version-instance:nth-child(2) {
-    margin-top:48px;
+    margin-top: 48px;
 }
 
 .committers {
-    border-left:1px solid black;
-    border-right:1px solid black;
-    border-bottom:1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
     max-height: 499px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 .committer-info {
-    width:100px;
+    width: 100px;
 }
 
 .committer {
@@ -85,12 +84,12 @@
     overflow: hidden;
     padding: 10px;
     display: block;
-    text-align : left;
+    text-align: left;
 }
 
 .committer-image {
     border-radius: 60px;
     height: 60px;
-    width : 60px;
-    border : black 2px solid;
+    width: 60px;
+    border: black 2px solid;
 }
