@@ -1,5 +1,5 @@
 import openSocket from 'socket.io-client';
-const socket = openSocket(`${process.env.REACT_APP_API_URI}`);
+const socket = openSocket(`${process.env.REACT_APP_SOCKET_IO_URI}`);
 
 const clientCallbacks = [];
 
@@ -7,10 +7,6 @@ const subscribeToEvent = () => {
     socket.on('versionEvent', versionEvent => {
         notifyClients(versionEvent);
     });
-
-    socket.on('betaStatusChange', versionEvent => {
-        alert('BETA!');
-    })
 };
 
 function notifyClients(versionEvent) {
