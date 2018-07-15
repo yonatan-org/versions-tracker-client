@@ -6,6 +6,8 @@ WORKDIR /home/app/code
 
 COPY . /home/app/code
 
-RUN yarn install
+RUN npm install && \
+    npm install -g serve@6.5.3 && \
+    npm run build
 
-CMD ["yarn", "start"]
+CMD npm run start:prod
