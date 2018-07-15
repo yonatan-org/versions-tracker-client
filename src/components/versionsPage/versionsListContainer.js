@@ -4,7 +4,7 @@ import $ from 'jquery';
 import * as serverEventsHandler from '../events/serverEventsHandler';
 
 function reloadVersions () {
-    $.get(`${process.env.REACT_APP_API_URI}/versions`).then((versions) => {
+    $.get(`${process.env.API_URI}/versions`).then((versions) => {
         this.setState({versions : versions});
     })
 }
