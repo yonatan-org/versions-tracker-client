@@ -1,7 +1,13 @@
 import openSocket from 'socket.io-client';
-const socket = openSocket(`${process.env.SOCKET_IO_URI}`);
+let socket;
+let isInit = false;
 
 const clientCallbacks = [];
+
+const init = () => {
+    console.log('init');
+    socket = openSocket(`http://tracker-api.getjaco.com:80`);
+};
 
 const subscribeToEvent = () => {
     socket.on('versionEvent', versionEvent => {
@@ -19,4 +25,8 @@ export function subscribeToServerEvent(callback) {
     clientCallbacks.push(callback);
 }
 
-subscribeToEvent();
+if (!isInit) {
+    isInit = true;
+    init();
+    subscribeToEvent();
+}
