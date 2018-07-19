@@ -31,7 +31,7 @@
     background: orange;
 }
 
-.version-info.aborted {
+.version-info.fail {
     background: red;
 }
 
