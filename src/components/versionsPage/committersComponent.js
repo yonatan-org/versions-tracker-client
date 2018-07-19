@@ -1,5 +1,6 @@
 import React from 'react';
 import Committer from "./committerComponent";
+import classNames from "classnames";
 
 class CommittersComponent extends React.Component {
 
@@ -8,16 +9,26 @@ class CommittersComponent extends React.Component {
     }
 
     render() {
-        const createCommitters = (committers) => {
+        const createCommitters = (version) => {
             let counter = 0;
-            return committers.map((committer) => {
-                return <Committer committer={committer} key={counter++}/>
+
+            const obj = {'version-color': true, 'table-cell': true};
+            obj[version.status] = true;
+            const versionColor = classNames(obj);
+
+            return version.commits.map((committer) => {
+                return (
+                <div key={counter++}>
+                    <div className={versionColor}></div>
+                    <Committer committer={committer}/>
+                </div>
+                )
             })
-        }
+        };
 
         return (
             <div className="committers">
-                {createCommitters(this.props.committers)}
+                {createCommitters(this.props.version)}
             </div>
         )
     }

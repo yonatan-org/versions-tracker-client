@@ -1,26 +1,17 @@
 import React from 'react';
 import classNames from 'classnames'
-import Card from '@material-ui/core/Card';
 
 const VersionInfoComponent = (props) => {
 
-    const obj = {'version-info': true};
+    const obj = {'version-color': true, 'table-cell': true, 'left-upper-border-radius' : true};
     obj[props.versionInfo.status] = true;
-    const versionInfoCss = classNames(obj);
+    const versionColor = classNames(obj);
 
     return (
-        <Card>
-            <div className={versionInfoCss}>
-                <div className="version-info-application table-cell">
-                    <div className="version-info-application">{props.versionInfo.projectName}</div>
-                </div>
-                <div className="version-info-time-and-version table-cell">
-                    {/*<div className="version-info-environment">{props.versionInfo.environment}</div>*/}
-                    {/*<div>{new Date(props.versionInfo.buildTime).toLocaleTimeString('en-GB')}</div>*/}
-                    <div>{props.versionInfo.versionId}</div>
-                </div>
-            </div>
-        </Card>
+        <div className="version-header-container">
+            <span className={versionColor}></span>
+            <span className="version-info-time-and-version right-upper-border-radius table-cell">{props.versionInfo.versionId}</span>
+        </div>
     );
 };
 

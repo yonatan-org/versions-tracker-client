@@ -1,8 +1,6 @@
 .version-bucket {
     /*max-width:32%;*/
     /*!*float:left;*!*/
-    border: 1px solid black;
-    margin: 8px;
 }
 
 .version-info-wrapper {
@@ -10,32 +8,62 @@
     border-radius: 50px 50px 0 0;
 }
 
-.version-info {
+.version-info-time-and-version {
+    background-color: lightgray;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.left-upper-border-radius {
+    border-radius: 7px 0 0 0;
+}
+
+.right-upper-border-radius {
+    border-radius: 0 7px 0 0;
+}
+
+.right-lower-border-radius {
+    border-radius: 0 0 7px 0;
+}
+
+.left-lower-border-radius {
+    border-radius: 0 0 0 7px;
+}
+
+.version-header-container {
     display: inline-table;
-    width: 380px;
-    height: 120px;
-    border-radius: 50px 50px 0 0;
-    padding: 10px;
-    border: 1px solid black;
+    width: 100%;
+}
+
+.version-info {
+    width: 10px;
+    height: 60px;
+    border-radius: 7px 0 0 0;
 }
 
 .version-info-title {
     height: 200px;
 }
 
-.version-info.complete {
+.version-color.complete {
     background: #00e600;
 }
 
-.version-info.init {
+.version-color {
+    width:7px;
+}
+
+.version-color.init {
     background: orange;
 }
 
-.version-info.fail {
+.version-color.fail {
     background: red;
 }
 
-.version-info.beta {
+.version-color.beta {
     background: blue;
 }
 
@@ -43,21 +71,19 @@
 }
 
 .version-info-application {
-    font-size: 40px;
+    font-size: 60px;
+    font-weight: 700;
 }
 
 .version-instance {
-    margin: 15px;
+    margin: 10px;
 }
 
 .version-instance:nth-child(2) {
-    margin-top: 48px;
+    margin-top: 18px;
 }
 
 .committers {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
     max-height: 499px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -74,7 +100,6 @@
 
 .table-cell {
     display: table-cell;
-    vertical-align: middle;
 }
 
 .commit-message {

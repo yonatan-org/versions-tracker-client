@@ -9,7 +9,7 @@ const versionInstance = (props) => {
     return (
         <div className="version-instance" key={counter++}>
             <VersionInfo className="version-info-title" versionInfo={props.version}/>
-            <CommittersComponent committers={props.version.commits}/>
+            <CommittersComponent version={props.version}/>
         </div>
     );
 

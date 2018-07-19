@@ -1,7 +1,6 @@
 import React from 'react';
 import VersionInstance from './versionInstanceComponent';
 import speechEventHandler from '../speech/speechEventHandler';
-import Card from '@material-ui/core/Card';
 
 const versionBucketComponent = (props) => {
 
@@ -17,9 +16,10 @@ const versionBucketComponent = (props) => {
     };
 
     return (
-        <Card className="version-bucket">
+        <div className="version-bucket">
+            <div className="version-info-application">{props.version[0].projectName}</div>
             {generateVersions(props.version)}
-        </Card>
+        </div>
 
     )
 };
