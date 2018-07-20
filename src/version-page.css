@@ -110,7 +110,7 @@ body {
 }
 
 .committer-name {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
     font-weight: 700;
 }
 
@@ -129,7 +129,7 @@ body {
     text-align: left;
     vertical-align: middle;
     padding-top:10px;
-    height: 110px;
+    height: 80px;
 }
 
 .commit-message {
