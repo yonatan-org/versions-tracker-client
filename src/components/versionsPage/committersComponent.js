@@ -12,13 +12,13 @@ class CommittersComponent extends React.Component {
         const createCommitters = (version) => {
             let counter = 0;
 
-            const obj = {'version-color': true, 'table-cell': true};
+            const obj = {'version-color': true, 'table-cell': true, 'committer-version-color' : true};
             obj[version.status] = true;
             const versionColor = classNames(obj);
 
             return version.commits.map((committer) => {
                 return (
-                <div key={counter++}>
+                <div key={counter++} className="committers-container">
                     <div className={versionColor}></div>
                     <Committer committer={committer}/>
                 </div>

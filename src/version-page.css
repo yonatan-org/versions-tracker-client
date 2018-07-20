@@ -1,4 +1,10 @@
+body {
+    background-color: #F0F0F0;
+}
+
 .version-bucket {
+    margin:20px 12px 0 0;
+
     /*max-width:32%;*/
     /*!*float:left;*!*/
 }
@@ -14,6 +20,10 @@
     text-align: left;
     line-height: 40px;
     font-weight: 700;
+    width:98%;
+}
+
+.committer-version-color{
 }
 
 .left-upper-border-radius {
@@ -32,8 +42,12 @@
     border-radius: 0 0 0 7px;
 }
 
-.version-header-container {
+.inline-table {
     display: inline-table;
+}
+
+.version-header-container {
+
     width: 100%;
 }
 
@@ -71,26 +85,33 @@
 }
 
 .version-info-application {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
+    text-align: left;
+    padding-left:25px;
 }
 
 .version-instance {
-    margin: 10px;
+    margin-top: 10px;
 }
 
-.version-instance:nth-child(2) {
-    margin-top: 18px;
-}
 
 .committers {
     max-height: 499px;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: white;
 }
 
 .committer-info {
     width: 100px;
+    padding-top:10px;
+    vertical-align: middle;
+}
+
+.committer-name {
+    margin: 0px 0px 20px 0px;
+    font-weight: 700;
 }
 
 .committer {
@@ -102,14 +123,16 @@
     display: table-cell;
 }
 
-.commit-message {
+.commit-message-container {
     text-overflow: ellipsis;
-    width: 370px;
-    white-space: nowrap;
     overflow: hidden;
-    padding: 10px;
-    display: block;
     text-align: left;
+    vertical-align: middle;
+    padding-top:10px;
+    height: 110px;
+}
+
+.commit-message {
 }
 
 .committer-image {

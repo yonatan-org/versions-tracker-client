@@ -9,8 +9,8 @@ const VersionInfoComponent = (props) => {
 
     return (
         <div className="version-header-container">
-            <span className={versionColor}></span>
-            <span className="version-info-time-and-version right-upper-border-radius table-cell">{props.versionInfo.versionId}</span>
+            <div className={versionColor}></div>
+            <div className="version-info-time-and-version right-upper-border-radius table-cell">{props.versionInfo.versionId}</div>
         </div>
     );
 };
