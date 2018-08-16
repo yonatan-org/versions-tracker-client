@@ -2,7 +2,7 @@
 
 <p>This is the front end application of the versions display application, you can get the server side application here: <a href="https://github.com/yonatankr/versions-manager-api">Versions Manager Api</a>.</p>
 
-<p><img src="https://github.com/yonatankr/versions-display/blob/master/Version Tracker.png" alt="Deploying state" title=""></p>
+<p><img src="https://github.com/yonatankr/versions-display/blob/master/version-tracker.png" alt="Deploying state" title=""></p>
 
 <h2 id="prerequisites"><strong>Prerequisites:</strong></h2>
 
