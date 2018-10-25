@@ -5,7 +5,7 @@ import * as serverEventsHandler from '../events/serverEventsHandler';
 import DeadManWalking from './deadManWalking';
 
 function reloadVersions() {
-    $.get(`http://localhost:3001/versions`).then((versions) => {
+    $.get(`http://tracker-api.getjaco.com/versions`).then((versions) => {
         this.setState({versions: versions});
     })
 }
