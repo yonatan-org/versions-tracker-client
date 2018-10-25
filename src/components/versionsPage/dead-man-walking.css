@@ -1,0 +1,25 @@
+.dead-man-walking {
+    background-color: red;
+    font-size: 70px;
+    color: white;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    50%  {background-color: darkred;}
+    100%  {background-color: red;}
+}
+
+.dead-man-walking-image {
+    max-width: 400px;
+}
+
+.jail-image {
+    width: 800px;
+    position: absolute;
+    margin-left: -400px;
+    height: 100%;
+}

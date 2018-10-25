@@ -5,10 +5,6 @@ import StackGrid from "react-stack-grid";
 
 class versionsPage extends React.Component {
 
-    componentDidUpdate = (props) => {
-        this.grid.updateLayout();
-    };
-
     render() {
         const generateVersionBuckets = (versionData) => {
 

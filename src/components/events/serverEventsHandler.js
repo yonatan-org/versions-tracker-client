@@ -2,27 +2,35 @@ import openSocket from 'socket.io-client';
 let socket;
 let isInit = false;
 
-const clientCallbacks = [];
+const clientsCallbacks = {};
 
 const init = () => {
     console.log('init');
-    socket = openSocket(`http://tracker-api.getjaco.com:80`);
+    socket = openSocket(`http://localhost:3001`);
 };
 
 const subscribeToEvent = () => {
-    socket.on('versionEvent', versionEvent => {
-        notifyClients(versionEvent);
-    });
+    registerToEvent('versionEvent');
+    registerToEvent('deadManWalking')
 };
 
-function notifyClients(versionEvent) {
-    for (let i = 0; i < clientCallbacks.length; i++) {
-        clientCallbacks[i](versionEvent);
+function registerToEvent(type) {
+    socket.on(type, data => {
+        notifyClients(type, data);
+    });
+}
+
+function notifyClients(type, data) {
+    for (var key in clientsCallbacks) {
+        if (clientsCallbacks.hasOwnProperty(key)) {
+            if (key === type)
+                clientsCallbacks[key](data);
+        }
     }
 }
 
-export function subscribeToServerEvent(callback) {
-    clientCallbacks.push(callback);
+export function subscribeToServerEvent(eventType, callback) {
+    clientsCallbacks[eventType] = callback;
 }
 
 if (!isInit) {

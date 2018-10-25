@@ -46,4 +46,4 @@ export function handleEvent(event) {
     }
 }
 
-serverEventsHandler.subscribeToServerEvent(handleEvent);
+// serverEventsHandler.subscribeToServerEvent(handleEvent);
