@@ -9,11 +9,6 @@ const init = () => {
     socket = openSocket(`http://tracker-api.getjaco.com:80`);
 };
 
-const subscribeToEvent = () => {
-    registerToEvent('versionEvent');
-    registerToEvent('deadManWalking')
-};
-
 function registerToEvent(type) {
     socket.on(type, data => {
         notifyClients(type, data);
@@ -30,11 +25,11 @@ function notifyClients(type, data) {
 }
 
 export function subscribeToServerEvent(eventType, callback) {
+    registerToEvent(eventType);
     clientsCallbacks[eventType] = callback;
 }
 
 if (!isInit) {
     isInit = true;
     init();
-    subscribeToEvent();
 }

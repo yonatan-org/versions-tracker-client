@@ -3,6 +3,7 @@ import VersionsListPage from './versionsListPage'
 import $ from 'jquery';
 import * as serverEventsHandler from '../events/serverEventsHandler';
 import DeadManWalking from './deadManWalking';
+import * as speech from '../speech/speech';
 
 function reloadVersions() {
     $.get(`http://tracker-api.getjaco.com/versions`).then((versions) => {
@@ -29,6 +30,7 @@ class versionsListContainer extends React.Component {
         };
 
         this.handleDeadManWalking = this.handleDeadManWalking.bind(this);
+        this.newFeatureDeployed = this.newFeatureDeployed.bind(this);
     }
 
     handleDeadManWalking(failedBuildData) {
@@ -42,10 +44,18 @@ class versionsListContainer extends React.Component {
         }, 6000);
     }
 
+    newFeatureDeployed(newFeatureData) {
+        speech.speak(`New Feature Deployed to production`);
+        setTimeout(() => {
+            speech.speak(`${newFeatureData.featureOwner} deployed the feature ${newFeatureData.featureName} to production`);
+        }, 2000)
+    }
+
     componentDidMount() {
         reloadVersions.bind(this)();
         serverEventsHandler.subscribeToServerEvent('versionEvent', reloadVersions.bind(this));
         serverEventsHandler.subscribeToServerEvent('deadManWalking', this.handleDeadManWalking);
+        serverEventsHandler.subscribeToServerEvent('newFeatureDeployed', this.newFeatureDeployed);
     }
 
     getView() {
