@@ -10,9 +10,9 @@ class deadManWalking extends React.Component {
             <img className="jail-image" src={jail}/>
             <div className="dead-man-walking-committers center-screen">
                 {commits.map((committer, index) => {
-                    speech.speak(`${committer.username} you broke the fucking master`);
+                    speech.speak(`${committer.name} you broke the fucking master`);
                     return <div className="dead-man-walking-committer" key={index}>
-                        <div className="dead-man-walking-committer-username">{committer.username}</div>
+                        <div className="dead-man-walking-committer-username">{committer.name}</div>
                         <img src={committer.imageUrl} className="dead-man-walking-image" alt=""/>
                     </div>
                 })}
