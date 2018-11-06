@@ -19,25 +19,25 @@ export function handleEvent(event) {
             break;
     }
 
-    const nameMapping = {
-        "shlomi.d" : "King Dozi",
-        "maxim.p" : "Queen Max",
-        "tomer.l" : "Princess T",
-        "matan.c" : "Ninja Israel Alek",
-        "eran.p" : "Marathon Man",
-        "yonatan.k" : "Yonatan - How's the beach?",
-        "itai.s" : "Lord Schwartz",
-        "gadi.r" : "Sir Gadi",
-        "maor.r" : "Logz Io",
-        "alex.p" : "Doctor Alex",
-        "itay.a" : "Professor Adler",
-        "yoni.g" : "Recent Acquisition",
-        "sergey.y" : "Amazon man",
-        "romi.e" : "Lady Rom",
-        "oron.a" : "The Student"
-    };
-
     function convertToMappedName(name) {
+        const nameMapping = {
+            "shlomi.d" : "King Dozi",
+            "maxim.p" : "Queen Max",
+            "tomer.l" : "Princess T",
+            "matan.c" : "Ninja Israel Alek",
+            "eran.p" : "Marathon Man",
+            "yonatan.k" : "Yonatan - How's the beach?",
+            "itai.s" : "Lord Schwartz",
+            "gadi.r" : "Sir Gadi",
+            "maor.r" : "Logz Io",
+            "alex.p" : "Doctor Alex",
+            "itay.a" : "Professor Adler",
+            "yoni.g" : "Recent Acquisition",
+            "sergey.y" : "Amazon man",
+            "romi.e" : "Lady Rom",
+            "oron.a" : "The Student"
+        };
+
         return nameMapping[name] || name;
     }
 
