@@ -4,12 +4,7 @@ import $ from 'jquery';
 import * as serverEventsHandler from '../events/serverEventsHandler';
 import DeadManWalking from './deadManWalking';
 import * as speech from '../speech/speech';
-
-function reloadVersions() {
-    $.get(`http://tracker-api.getjaco.com/versions`).then((versions) => {
-        this.setState({versions: versions});
-    })
-}
+import * as speechEventHandler from '../speech/speechEventHandler';
 
 function playAlert(filename) {
     const mp3Source = '<source src="' + filename + '.mp3" type="audio/mpeg">';
@@ -31,6 +26,13 @@ class versionsListContainer extends React.Component {
 
         this.handleDeadManWalking = this.handleDeadManWalking.bind(this);
         this.newFeatureDeployed = this.newFeatureDeployed.bind(this);
+        this.reloadVersions = this.reloadVersions.bind(this);
+    }
+
+    reloadVersions() {
+        $.get(`http://tracker-api.getjaco.com/versions`).then((versions) => {
+            this.setState({versions: versions});
+        })
     }
 
     handleDeadManWalking(failedBuildData) {
@@ -39,7 +41,6 @@ class versionsListContainer extends React.Component {
             this.setState({isDeadManWalking:true, failedBuildData:failedBuildData});
             setTimeout(() => {
                 this.setState({isDeadManWalking:false});
-
             }, 600000);
         }, 6000);
     }
@@ -52,8 +53,11 @@ class versionsListContainer extends React.Component {
     }
 
     componentDidMount() {
-        reloadVersions.bind(this)();
-        serverEventsHandler.subscribeToServerEvent('versionEvent', reloadVersions.bind(this));
+        this.reloadVersions();
+        serverEventsHandler.subscribeToServerEvent('versionEvent', (data) => {
+            this.reloadVersions();
+            speechEventHandler.handleEvent(data)
+        });
         serverEventsHandler.subscribeToServerEvent('deadManWalking', this.handleDeadManWalking);
         serverEventsHandler.subscribeToServerEvent('newFeatureDeployed', this.newFeatureDeployed);
     }

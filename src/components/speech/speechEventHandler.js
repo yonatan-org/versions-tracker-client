@@ -1,8 +1,6 @@
 import * as speech from './speech';
-import * as serverEventsHandler from '../events/serverEventsHandler';
 
 export function handleEvent(event) {
-
     switch (event.status) {
         case 'init' :
             handleStartDeployment(event);
@@ -45,5 +43,3 @@ export function handleEvent(event) {
         speech.speak(`deployment of ${event.projectName} has been aborted`);
     }
 }
-
-// serverEventsHandler.subscribeToServerEvent(handleEvent);
