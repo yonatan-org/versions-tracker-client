@@ -19,11 +19,33 @@ export function handleEvent(event) {
             break;
     }
 
+    const nameMapping = {
+        "shlomi.d" : "King Dozi",
+        "maxim.p" : "Queen Max",
+        "tomer.l" : "Princess T",
+        "matan.c" : "Ninja Israel Alek",
+        "eran.p" : "Marathon Man",
+        "yonatan.k" : "Yonatan - How's the beach?",
+        "itai.s" : "Lord Schwartz",
+        "gadi.r" : "Sir Gadi",
+        "maor.r" : "Logz Io",
+        "alex.p" : "Doctor Alex",
+        "itay.a" : "Professor Adler",
+        "yoni.g" : "Recent Acquisition",
+        "sergey.y" : "Amazon man",
+        "romi.e" : "Lady Rom",
+        "oron.a" : "The Student"
+    };
+
+    function convertToMappedName(name) {
+        return nameMapping[name] || name;
+    }
+
     function handleStartDeployment(event) {
         speech.speak(`starting deployment of ${event.projectName}`);
         speech.speak(`with commits by`);
         event.commits.map((commitData) => {
-            setTimeout(speech.speak(commitData.name), 700);
+            setTimeout(speech.speak(convertToMappedName(commitData.name)), 700);
         })
     }
 
