@@ -11,7 +11,7 @@ export function handleEvent(event) {
         case 'failure' :
             handleDeploymentFailed(event);
             break;
-        case 'aborted' :
+        case 'fail' :
             handleDeploymentAborted(event);
             break;
         case 'beta' :
@@ -22,8 +22,8 @@ export function handleEvent(event) {
     function convertToMappedName(name) {
         const nameMapping = {
             "shlomi.d" : "King Dozi",
-            "maxim.p" : "Queen Max",
-            "tomer.l" : "Princess T",
+            "maxim.p" : "Doctor Druid",
+            "tomer.l" : "Her Laufer",
             "matan.c" : "Ninja Israel Alek",
             "eran.p" : "Marathon Man",
             "yonatan.k" : "Yonatan - How's the beach?",
