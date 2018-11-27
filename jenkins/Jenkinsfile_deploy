@@ -12,7 +12,8 @@ deploy: {
               checkout scm
 
               stage('Duild and push') {
-                    sh "./push-image.sh"
+                    sh "ls"
+                    sh "./jenkins/push-image.sh"
                }
 
               stage('Deploy') {
@@ -24,7 +25,7 @@ deploy: {
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                       ]
                   ]) {
-                       sh "./deploy-to-ecs"
+                       sh "./jenkins/deploy-to-ecs.sh"
                   }
               }
           }
