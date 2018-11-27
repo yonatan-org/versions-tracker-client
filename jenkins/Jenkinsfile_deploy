@@ -1,6 +1,6 @@
 properties([disableConcurrentBuilds()])
 
-
+timeout(15) {
 deploy: {
    node('insights-ec2') {
           withCredentials([
@@ -29,6 +29,6 @@ deploy: {
               }
           }
       }
+    }
 }
-
 
