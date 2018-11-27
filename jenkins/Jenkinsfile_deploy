@@ -8,7 +8,7 @@ deploy: {
               string(credentialsId: 'npm-auth-token', variable: 'NPM_AUTH_TOKEN')
           ]) {
               stage('Duild and push') {
-                    sh "./jenkins/push-image.sh"
+                    sh "./push-image.sh"
                }
 
               stage('Deploy') {
@@ -20,7 +20,7 @@ deploy: {
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                       ]
                   ]) {
-                       sh "./jenkins/deploy-to-ecs"
+                       sh "./deploy-to-ecs"
                   }
               }
           }
