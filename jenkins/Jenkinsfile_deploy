@@ -11,8 +11,7 @@ deploy: {
 
               checkout scm
 
-              stage('Duild and push') {
-                    sh "ls"
+              stage('Build and push') {
                     sh "./jenkins/push-image.sh"
                }
 
