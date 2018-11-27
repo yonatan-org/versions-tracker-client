@@ -7,6 +7,10 @@ deploy: {
               usernamePassword(credentialsId: 'npm-auth-username', passwordVariable: 'NPM_AUTH_PASSWORD', usernameVariable: 'NPM_AUTH_USERNAME'),
               string(credentialsId: 'npm-auth-token', variable: 'NPM_AUTH_TOKEN')
           ]) {
+              sh 'sudo chown -R ubuntu:ubuntu .'
+
+              checkout scm
+
               stage('Duild and push') {
                     sh "./push-image.sh"
                }
