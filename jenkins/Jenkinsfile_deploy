@@ -1,0 +1,30 @@
+properties([disableConcurrentBuilds()])
+
+
+deploy: {
+   node('insights-ec2') {
+          withCredentials([
+              usernamePassword(credentialsId: 'npm-auth-username', passwordVariable: 'NPM_AUTH_PASSWORD', usernameVariable: 'NPM_AUTH_USERNAME'),
+              string(credentialsId: 'npm-auth-token', variable: 'NPM_AUTH_TOKEN')
+          ]) {
+              stage('Duild and push') {
+                    sh "./jenkins/push-image.sh"
+               }
+
+              stage('Deploy') {
+                  withCredentials([
+                      [
+                          $class: 'AmazonWebServicesCredentialsBinding',
+                          credentialsId: 'jenkins_deploy',
+                          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+                          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+                      ]
+                  ]) {
+                       sh "./jenkins/deploy-to-ecs"
+                  }
+              }
+          }
+      }
+}
+
+
