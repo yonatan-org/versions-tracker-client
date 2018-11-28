@@ -1,5 +1,7 @@
 #!/bin/bash
 
-docker build -t bluehotdog/versions_tracker_client .
+BUILD_NUMBER=$1
 
-docker push  bluehotdog/versions_tracker_client
+docker build -t bluehotdog/versions_tracker_client:$BUILD_NUMBER .
+
+docker push bluehotdog/versions_tracker_client:$BUILD_NUMBER
