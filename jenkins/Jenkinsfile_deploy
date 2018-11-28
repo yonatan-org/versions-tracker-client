@@ -2,7 +2,7 @@ properties([disableConcurrentBuilds()])
 
 timeout(15) {
 deploy: {
-   node('insights-ec2') {--
+   node('insights-ec2') {
           withCredentials([
               usernamePassword(credentialsId: 'npm-auth-username', passwordVariable: 'NPM_AUTH_PASSWORD', usernameVariable: 'NPM_AUTH_USERNAME'),
               string(credentialsId: 'npm-auth-token', variable: 'NPM_AUTH_TOKEN')
@@ -12,7 +12,8 @@ deploy: {
               checkout scm
 
               stage('Build and push') {
-                    sh "./jenkins/push-image.sh ${env.BUILD_NUMBER}"
+                    sh "./jenkins/version-tracker-notifier.sh init version-tracker-client"
+                    sh "./jenkins/push-image.sh "
                }
 
               stage('Deploy') {
@@ -24,7 +25,9 @@ deploy: {
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                       ]
                   ]) {
-                       sh "./jenkins/deploy-to-ecs.sh ${env.BUILD_NUMBER}"
+                       sh "./jenkins/version-tracker-notifier.sh beta version-tracker-client"
+                       sh "./jenkins/deploy-to-ecs.sh"
+                       sh "./jenkins/version-tracker-notifier.sh complete version-tracker-client"
                   }
               }
           }
