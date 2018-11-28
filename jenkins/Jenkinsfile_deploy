@@ -12,8 +12,7 @@ deploy: {
               checkout scm
 
               stage('Build and push') {
-                    sh "./jenkins/version-tracker-notifier.sh init version-tracker-client"
-                    sh "./jenkins/push-image.sh "
+                    sh "./jenkins/push-image.sh ${env.BUILD_NUMBER}"
                }
 
               stage('Deploy') {
@@ -25,9 +24,7 @@ deploy: {
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                       ]
                   ]) {
-                       sh "./jenkins/version-tracker-notifier.sh beta version-tracker-client"
-                       sh "./jenkins/deploy-to-ecs.sh"
-                       sh "./jenkins/version-tracker-notifier.sh complete version-tracker-client"
+                       sh "./jenkins/deploy-to-ecs.sh ${env.BUILD_NUMBER}"
                   }
               }
           }
