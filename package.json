@@ -15,7 +15,7 @@
     "react-router-dom": "^4.3.1",
     "react-stack-grid": "^0.7.1",
     "socket.io-client": "^2.0.3",
-    "query-string": "latest"
+    "qs": "latest"
   },
   "scripts": {
     "start:prod": "serve -s build -p 3000",

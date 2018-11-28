@@ -1,7 +1,7 @@
 import React from 'react';
 import VersionsListPage from './versionsListPage'
 import $ from 'jquery';
-import queryString from 'query-string';
+import qs from 'qs';
 import * as serverEventsHandler from '../events/serverEventsHandler';
 import DeadManWalking from './deadManWalking';
 import * as speech from '../speech/speech';
@@ -17,14 +17,14 @@ function playAlert(filename) {
 class versionsListContainer extends React.Component {
 
     constructor(props) {
-        const values = queryString.parse(props.location.search);
+        const qsParsed = qs.parse(props.location.search.slice(1));
 
         super(props);
 
         this.state = {
             versions: [],
             isDeadManWalking: false,
-            ignoredProjects : values.ignoredProjects ? values.ignoredProjects.split(',') : [],
+            ignoredProjects : qsParsed.ignoredProjects ? qsParsed.ignoredProjects.split(',') : [],
             failedBuildData: {}
         };
 
