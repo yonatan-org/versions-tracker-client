@@ -12,8 +12,10 @@
     "jquery": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.3.1",
     "react-stack-grid": "^0.7.1",
-    "socket.io-client": "^2.0.3"
+    "socket.io-client": "^2.0.3",
+    "query-string": "latest"
   },
   "scripts": {
     "start:prod": "serve -s build -p 3000",

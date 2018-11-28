@@ -6,7 +6,7 @@ import StackGrid from "react-stack-grid";
 class versionsPage extends React.Component {
 
     render() {
-        const generateVersionBuckets = (versionData) => {
+        const generateVersionBuckets = (versionData, ignoredProjects) => {
 
             if (versionData.length === 0)
                 return null;
@@ -15,7 +15,7 @@ class versionsPage extends React.Component {
             const projects = [];
 
             for (var projectName in versionData) {
-                if (versionData.hasOwnProperty(projectName)) {
+                if (versionData.hasOwnProperty(projectName) && !ignoredProjects.includes(projectName)) {
                     projects.push(projectName)
                 }
             }
@@ -27,7 +27,7 @@ class versionsPage extends React.Component {
 
         return (
             <StackGrid columnWidth={350} gutterWidth={0} gridRef={grid => this.grid = grid}>
-                {generateVersionBuckets(this.props.versions)}
+                {generateVersionBuckets(this.props.versions, this.props.ignoredProjects)}
             </StackGrid>
 
         )
