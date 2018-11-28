@@ -12,7 +12,7 @@ deploy: {
               checkout scm
 
               stage('Build and push') {
-                    sh "./jenkins/push-image.sh ${env.BUILD_ID}"
+                    sh "./jenkins/push-image.sh env.BUILD_ID"
                }
 
               stage('Deploy') {
@@ -24,7 +24,7 @@ deploy: {
                           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                       ]
                   ]) {
-                       sh "./jenkins/deploy-to-ecs.sh ${env.BUILD_ID}"
+                       sh "./jenkins/deploy-to-ecs.sh env.BUILD_ID"
                   }
               }
           }
