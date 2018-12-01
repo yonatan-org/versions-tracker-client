@@ -8,14 +8,16 @@
   "dependencies": {
     "@material-ui/core": "^1.2.1",
     "classnames": "^2.2.5",
+    "dotenv": "^6.1.0",
     "isexe": "^2.0.0",
     "jquery": "^3.2.1",
+    "qs": "latest",
     "react": "^15.6.1",
+    "react-app-env": "^1.2.3",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.3.1",
     "react-stack-grid": "^0.7.1",
-    "socket.io-client": "^2.0.3",
-    "qs": "latest"
+    "socket.io-client": "^2.0.3"
   },
   "scripts": {
     "start:prod": "serve -s build -p 3000",
