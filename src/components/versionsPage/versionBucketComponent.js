@@ -11,8 +11,8 @@ const versionBucketComponent = (props) => {
 
         let counter = 0;
         return versions.map((version) => {
-            return <VersionInstance version={version} key={counter++}/>
-        })
+            return <VersionInstance version={version} key={counter++}/>;
+        });
     };
 
     return (

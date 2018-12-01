@@ -16,8 +16,8 @@ const dataRetrievingComponent = (WrappedComponent, options) => {
         reloadData() {
             const url = process.env.REACT_APP_VERSION_TRACKER_API;
             $.get(`${url}${options.relativeUrl}`).then((data) => {
-                this.setState(data);
-            })
+                this.setState({data});
+            });
         }
 
 
@@ -31,14 +31,10 @@ const dataRetrievingComponent = (WrappedComponent, options) => {
                 return null;
             }
 
-            return <WrappedComponent data = {
-                this.state.data
-            } { ...this.props
-            }
-            />;
+            return <WrappedComponent data={this.state.data}/>;
         }
 
-    }
-}
+    };
+};
 
 export default dataRetrievingComponent;

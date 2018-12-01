@@ -1,9 +1,6 @@
 import React from 'react';
 import dataRetrievingComponent from '../general/dataRetrievingComponent';
-
-const featuresReleaseContainerWithData = dataRetrievingComponent(featuresReleaseContainer, {
-    relativeUrl : "/features-release"
-})
+import FeatureReleasePage from './featuresReleasePage';
 
 class featuresReleaseContainer extends React.Component {
 
@@ -12,8 +9,12 @@ class featuresReleaseContainer extends React.Component {
     }
 
     render() {
-        return <div></div>
+        return <FeatureReleasePage features={this.props.data}></FeatureReleasePage>;
     }
 }
+
+const featuresReleaseContainerWithData = dataRetrievingComponent(featuresReleaseContainer, {
+    relativeUrl : "/features-release"
+});
 
 export default featuresReleaseContainerWithData;
