@@ -29,7 +29,7 @@ export function handleEvent(event) {
             "yonatan.k" : "Yonatan - How is the weather at the beach?",
             "itai.s" : "Lord Schwartz",
             "gadi.r" : "Sir Gadi",
-            "maor.r" : "Logz Io",
+            "maor.r" : "Shaun White",
             "alex.p" : "Doctor Alex",
             "itay.a" : "Professor Adler",
             "yoni.g" : "Recent Acquisition",
