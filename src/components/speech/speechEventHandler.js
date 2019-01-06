@@ -28,21 +28,21 @@ export function handleEvent(event) {
 
     function convertToMappedName(name) {
         const nameMapping = {
-            "shlomi.d" : "King Dozi",
-            "maxim.p" : "Doctor Druid",
-            "tomer.l" : "Her Laufer",
-            "matan.c" : "Harry Potter",
-            "eran.p" : "Marathon Man",
-            "yonatan.k" : "Yonatan - How is the weather at the beach?",
-            "itai.s" : "Itai Pinky",
-            "gadi.r" : "Sir Gadi",
-            "maor.r" : "Shaun White",
-            "alex.p" : "Doctor Alex",
-            "itay.a" : "Professor Adler",
-            "yoni.g" : "Recent Acquisition",
-            "sergey.y" : "Amazon man",
-            "romi.e" : "Lady Rom",
-            "oron.a" : "The Student"
+            "shlomi.d": "King Dozi",
+            "maxim.p": "Doctor Druid",
+            "tomer.l": "Her Laufer",
+            "matan.c": "Harry Potter",
+            "eran.p": "Marathon Man",
+            "yonatan.k": "Yonatan - How is the weather at the beach?",
+            "itai.s": "Itai Pinky",
+            "gadi.r": "Sir Gadi",
+            "maor.r": "Shaun White",
+            "alex.p": "Doctor Alex",
+            "itay.a": "Professor Adler",
+            "yoni.g": "Recent Acquisition",
+            "sergey.y": "Amazon man",
+            "romi.e": "Lady Rom",
+            "oron.a": "The Student"
         };
 
         return nameMapping[name] || name;
@@ -52,7 +52,7 @@ export function handleEvent(event) {
         speech.speak(`starting deployment of ${event.projectName}`);
         speech.speak(`with commits by`);
         event.commits.map((commitData) => {
-            setTimeout(speech.speak(convertToMappedName(commitData.name, specialLanguage(commitData.name))), 700);
+            setTimeout(speech.speak(convertToMappedName(commitData.name), specialLanguage(commitData.name)), 700);
         })
     }
 
