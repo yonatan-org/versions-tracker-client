@@ -9,9 +9,9 @@ const getVoices = () => {
             }
         }, 50)
     })
-}
+};
 
-export function speak(text) {
+export function speak(text, language = "Google UK English Female") {
 
     getVoices().then((voices) => {
         // Create a new instance of SpeechSynthesisUtterance.
@@ -25,8 +25,10 @@ export function speak(text) {
         msg.rate = parseFloat(0.9);
         msg.pitch = parseFloat(1);
 
+
+
         msg.voice = voices.filter(function (voice) {
-            return voice.name == "Google US English";
+            return voice.name === language;
         })[0];
 
         // Queue this utterance.

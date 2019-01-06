@@ -19,6 +19,13 @@ export function handleEvent(event) {
             break;
     }
 
+    function specialLanguage(name) {
+        switch (name) {
+            case "tomer.l" : return "Google Deutsch";
+            default: return undefined
+        }
+    }
+
     function convertToMappedName(name) {
         const nameMapping = {
             "shlomi.d" : "King Dozi",
@@ -45,7 +52,7 @@ export function handleEvent(event) {
         speech.speak(`starting deployment of ${event.projectName}`);
         speech.speak(`with commits by`);
         event.commits.map((commitData) => {
-            setTimeout(speech.speak(convertToMappedName(commitData.name)), 700);
+            setTimeout(speech.speak(convertToMappedName(commitData.name, specialLanguage(commitData.name))), 700);
         })
     }
 
