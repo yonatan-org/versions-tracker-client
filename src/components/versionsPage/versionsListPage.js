@@ -26,7 +26,7 @@ class versionsPage extends React.Component {
         };
 
         return (
-            <StackGrid columnWidth={430} gutterWidth={30} gridRef={grid => this.grid = grid}>
+            <StackGrid columnWidth={380} gutterWidth={30} gridRef={grid => this.grid = grid}>
                 {generateVersionBuckets(this.props.versions, this.props.ignoredProjects)}
             </StackGrid>
 
