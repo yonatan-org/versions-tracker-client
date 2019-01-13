@@ -51,9 +51,9 @@ class versionsListContainer extends React.Component {
     }
 
     newFeatureDeployed(newFeatureData) {
-        speech.speak(`New Feature Deployed to production`);
+        speech(`New Feature Deployed to production`);
         setTimeout(() => {
-            speech.speak(`${newFeatureData.featureOwner} deployed the feature ${newFeatureData.featureName} to production`);
+            speech(`${newFeatureData.featureOwner} deployed the feature ${newFeatureData.featureName} to production`);
         }, 2000)
     }
 
