@@ -6,8 +6,8 @@ const clientsCallbacks = {};
 
 const init = () => {
     console.log('init');
-    socket = openSocket(`http://tracker-api.getjaco.com:80`);
-    //socket = openSocket(`http://localhost:3001`);
+    // socket = openSocket(`http://tracker-api.getjaco.com:80`);
+    socket = openSocket(`http://localhost:3001`);
 };
 
 function registerToEvent(type) {
