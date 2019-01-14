@@ -51,8 +51,8 @@ export function handleEvent(event) {
     function handleStartDeployment(event) {
         speech.speak(`starting deployment of ${event.projectName}`);
         speech.speak(`with commits by`);
-        event.commits.map((commitData) => {
-            setTimeout(speech.speak(convertToMappedName(commitData.name), specialLanguage(commitData.name)), 700);
+        event.commits.forEach((commitData) => {
+            speech.speak(convertToMappedName(commitData.name), specialLanguage(commitData.name))
         })
     }
 

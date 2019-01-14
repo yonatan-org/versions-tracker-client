@@ -1,6 +1,8 @@
-export async function speak(text, language) {
-
-    let voices = await speechSynthesis.getVoices();
+let voices = [];
+export async function speak(text, language = "Google US English") {
+    if (voices.length === 0) {
+        voices = await speechSynthesis.getVoices();
+    }
     var msg = new SpeechSynthesisUtterance();
 
     // Set the text.
