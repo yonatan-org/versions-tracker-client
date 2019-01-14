@@ -10,13 +10,15 @@ export async function speak(text, language = "Google US English") {
 
     // Set the attributes.
     msg.volume = parseFloat(20);
-    msg.rate = parseFloat(0.9);
+    msg.rate = parseFloat(0.5);
     msg.pitch = parseFloat(1);
 
 
-    msg.voice = voices.filter(function (voice) {
-        return voice.name === language;
-    })[0];
+    for(let i = 0; i < voices.length ; i++) {
+        if(voices[i].name === language) {
+            msg.voice = voices[i];
+        }
+    }
 
     // Queue this utterance.
     window
