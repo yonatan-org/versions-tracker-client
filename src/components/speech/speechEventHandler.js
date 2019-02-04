@@ -42,7 +42,8 @@ export function handleEvent(event) {
             "yoni.g": "Recent Acquisition",
             "sergey.y": "Amazon man",
             "romi.e": "Lady Rom",
-            "oron.a": "The Student"
+            "oron.a": "The Student",
+            "elad.l" : "Aussie Devil"
         };
 
         return nameMapping[name] || name;
