@@ -34,7 +34,7 @@ export function handleEvent(event) {
             "matan.c": "Harry Potter",
             "eran.p": "Marathon Man",
             "yonatan.k": "Yonatan - How is the weather at the beach?",
-            "itai.s": "Itai Pinky",
+            "itai.s": "Etay Pinkee",
             "gadi.r": "Sir Gadi",
             "maor.r": "Shaun White",
             "alex.p": "Doctor Alex",
