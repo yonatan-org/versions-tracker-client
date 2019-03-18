@@ -31,7 +31,7 @@ class versionsListContainer extends React.Component {
         this.handleDeadManWalking = this.handleDeadManWalking.bind(this);
         this.newFeatureDeployed = this.newFeatureDeployed.bind(this);
         this.reloadVersions = this.reloadVersions.bind(this);
-        versionsListContainer.userMigratedToDruid = versionsListContainer.userMigratedToDruid.bind(this);
+        this.userMigratedToDruid = this.userMigratedToDruid.bind(this);
     }
 
     reloadVersions() {
