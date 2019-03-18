@@ -31,7 +31,7 @@ class versionsListContainer extends React.Component {
         this.handleDeadManWalking = this.handleDeadManWalking.bind(this);
         this.newFeatureDeployed = this.newFeatureDeployed.bind(this);
         this.reloadVersions = this.reloadVersions.bind(this);
-        this.userMigratedToDruid = this.userMigratedToDruid.bind(this);
+        versionsListContainer.userMigratedToDruid = versionsListContainer.userMigratedToDruid.bind(this);
     }
 
     reloadVersions() {
@@ -50,15 +50,15 @@ class versionsListContainer extends React.Component {
         }, 6000);
     }
 
-    userMigratedToDruid(userMigratedData) {
-        speech(`User Migrated To Druid ${userMigratedData}`);
+    newFeatureDeployed(newFeatureData) {
+        speech.speak(`New Feature Deployed to production`);
+        setTimeout(() => {
+            speech.speak(`${newFeatureData.featureOwner} deployed the feature ${newFeatureData.featureName} to production`);
+        }, 2000)
     }
 
-    newFeatureDeployed(newFeatureData) {
-        speech(`New Feature Deployed to production`);
-        setTimeout(() => {
-            speech(`${newFeatureData.featureOwner} deployed the feature ${newFeatureData.featureName} to production`);
-        }, 2000)
+    static userMigratedToDruid(userMigratedData) {
+        speech.speak(`User Migrated To Druid ${userMigratedData}`);
     }
 
     componentDidMount() {
@@ -69,7 +69,7 @@ class versionsListContainer extends React.Component {
         });
         serverEventsHandler.subscribeToServerEvent('deadManWalking', this.handleDeadManWalking);
         serverEventsHandler.subscribeToServerEvent('newFeatureDeployed', this.newFeatureDeployed);
-        serverEventsHandler.subscribeToServerEvent('userMigratedToDruid', this.userMigratedToDruid);
+        serverEventsHandler.subscribeToServerEvent('userMigratedToDruid', versionsListContainer.userMigratedToDruid);
     }
 
     getView() {
