@@ -69,7 +69,6 @@ class versionsListContainer extends React.Component {
         });
         serverEventsHandler.subscribeToServerEvent('deadManWalking', this.handleDeadManWalking);
         serverEventsHandler.subscribeToServerEvent('newFeatureDeployed', this.newFeatureDeployed);
-        serverEventsHandler.subscribeToServerEvent('userMigratedToDruid', versionsListContainer.userMigratedToDruid);
     }
 
     getView() {
