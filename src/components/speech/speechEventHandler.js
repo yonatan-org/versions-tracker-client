@@ -33,7 +33,7 @@ export function handleEvent(event) {
             "tomer.l": "Her Laufer",
             "matan.c": "Harry Potter",
             "eran.p": "Marathon Man",
-            "yonatan.k": "Yonatan - How is the shoulder?",
+            "yonatan.k": "Yonatan - No more black slopes for you?",
             "itai.s": "Etay Pinkee",
             "gadi.r": "Sir Gadi",
             "maor.r": "Shaun White",
